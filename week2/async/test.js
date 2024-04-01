@@ -6,3 +6,6 @@ console.log(a);
 a /= b;
 console.log(a);
 console.log("Hello World!")
+
+//add -> commit -> push
+//tracked(staged) -> unmodified -> upload
