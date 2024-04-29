@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+    <script>
+        const root = document.getElementById("root");
+        const Title = (
+            <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
+                Hello I'm a title
+            </h3>
+        );
+        const Button = <button style={{
+            backgroundColor: "tomato",
+        }} onClick={(console.log("i'm clicked"))}>Click me</button>
+        /* old way creating element
+        const h3 = React.createElement("h3", {
+            onMouseEnter: () => console.log("mouse enter"),
+        }, 
+        "Hello I'm a title"); 
+        */
+        /*
+        const btn = React.createElement("button", {
+            onClick: () => console.log('I am clicked'),
+        }, 
+        "Click me"
+    );
+        */
+        const container = React.createElement("div", null, [Title, Button])
+        ReactDOM.render(conatiner, root); /*React element를 HTML로 만들어 배치 -> show to the user */
+    </script>
+
+</html> 

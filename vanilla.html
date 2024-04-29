@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <span>Total clicks: 0</span>
+        <button id="btn">Click me</button>
+    </body>
+    <script>
+        let counter = 0;
+        const button = document.getElenetById("btn");
+        const span = document.querySelector("span");
+        function handleClick() {
+            counter += 1;
+            span.innerText = `Total clicks: ${counter}`;
+        }
+        button.addEventListener("click", handleClick);
+    </script>
+</html>
+
+<!--
+    <Process> - before ReactJS
+    1. Create html
+    2. Grab it from JavaScript
+    3. Listen for Event
+    4. Update the data in JavaScript
+    5. Update html as well
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <span>Total clicks: 0</span>
+    <button id="btn">click me</button>
+</body>
+<script>
+    let counter = 0;
+    const button = document.querySelector("btn");
+    const span = document.querySelector("span");
+    function handleClick() {
+        counter = counter + 1;
+        span.innerText = `Total clicks: ${counter}`;
+    }
+    button.addEventListener("click", handleClick);
+</script>
+
+</html>
